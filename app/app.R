@@ -11,24 +11,26 @@ ui <- material_page(
   nav_bar_fixed = TRUE,
   
   
-  # Place side-nav in the beginning of the UI
-  material_side_nav(fixed = TRUE, # Place side-nav tabs within side-nav
-                    material_side_nav_tabs(side_nav_tabs = c("Example tab 1" = "example_1",
-                                                             "About" = "about_section"),
-                                           icons = c("assessment", "blur_off"))
-  ),
+  # # Place side-nav in the beginning of the UI
+  # material_side_nav(fixed = TRUE, # Place side-nav tabs within side-nav
+  #                   material_side_nav_tabs(side_nav_tabs = c("Example tab 1" = "example_1",
+  #                                                            "About" = "about_section"),
+  #                                          icons = c("assessment", "blur_off"))
+  # ),
   
   material_row(
     material_column(
       width = 2,
       material_card(
         title = "",
-        depth = 4,
-        material_switch(
-          input_id = "example_input",
-          label = "Turn me on",
-          off_label = "",
-          on_label = ""
+        depth = 5,
+        material_dropdown(
+          input_id = "num_rep_input",
+          label = "Pick number of replicates",
+          choices = c(1, 2, 3, 4, 5),
+          selected = NULL,
+          multiple = FALSE
+          
         ))),
     material_column(width = 10,
                     # Define side-nav tab content
