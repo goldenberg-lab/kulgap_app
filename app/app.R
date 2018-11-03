@@ -27,6 +27,15 @@ ui <- material_page(
         material_dropdown(
           input_id = "num_rep_input",
           label = "Pick number of replicates",
+          choices = c(1, 2, 3, 4, 5, 6, 7),
+          selected = NULL,
+          multiple = FALSE
+          
+        ),
+        br(), 
+        material_dropdown(
+          input_id = 'time_input',
+          label = "How many time points",
           choices = c(1, 2, 3, 4, 5),
           selected = NULL,
           multiple = FALSE
